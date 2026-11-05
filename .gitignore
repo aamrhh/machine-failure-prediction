@@ -1,0 +1,12 @@
+# Virtual environment (each person makes their own)
+.venv/
+
+# Mac system files
+.DS_Store
+
+# Jupyter and Python temporary files
+.ipynb_checkpoints/
+__pycache__/
+
+# Personal notes
+my_notes.md
