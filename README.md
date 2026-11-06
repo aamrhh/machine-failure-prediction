@@ -82,14 +82,13 @@ Each reading must be scored using only what is known **at that moment**. Sensor 
 
 The data alone cannot prove these. So each one is written down as an assumption, with the question that would confirm it.
 
-| Assumption | Why it matters | Question for the data owner |
+| Assumption | Question for the data owner | If yes |
 |---|---|---|
-| South pressure from 14 Dec 2024 is in psi | If this is wrong, the fix in Notebook 01 is wrong too. | Did the South site change its pressure sensor or unit in December 2024? |
-| −999 in vibration means "no reading" | If −999 means something else, treating it as missing loses information. | Is −999 a code for a missing reading? |
-| Repair orders may be written because of the breakdown | If they are entered on time, this column could be used, and the model could need far fewer visits (141 instead of 376). | When is a repair order entered into the system, and which date is saved? |
-| The inspection interval changes because of a repair order | Same as above. It decides if this column can be used. | Is this the interval at the time of the reading, or the latest one? |
-| Unplanned stops are recorded on the day they happen | The model uses this column. If stops are written late, the model is using information it would not have in real life. | Are stops entered on the same day they happen? |
-| The failure date is when the failure happened | The target is built from this date. If failures are written down late, repair orders would look like they came before the failure, even when they did not. | The brief says a failure is **recorded**. Is that the day it happened, or the day it was written down? |
+| Repair orders may be written because of the breakdown | Is a repair order entered on the day it is raised, with that day's date? | Repair orders can be used. The model could need far fewer visits (141 instead of 376). |
+| The inspection interval changes because of a repair order | Is the inspection interval the value in force at the time of the reading? | The inspection interval can be used. |
+| Unplanned stops are recorded on the day they happen | Are unplanned stops entered on the day they happen? | The model can keep using this column safely. |
+| South pressure from 14 Dec 2024 is in psi | Did the South site change its pressure unit to psi in Dec 2024? | The psi to kPa fix is correct. |
+| −999 in vibration means "no reading" | Is −999 a code for a missing vibration reading? | Treating −999 as missing is correct. |
 
 ---
 
